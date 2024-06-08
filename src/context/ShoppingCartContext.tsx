@@ -1,4 +1,4 @@
-import { ReactNode, createContext, useContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useContext, useEffect, useState, useMemo } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 
 type ShoppingCartProviderProps =  Readonly<{
@@ -89,7 +89,20 @@ export function ShoppingCartProvider( { children }: ShoppingCartProviderProps ) 
         })
     }
 
-    return <ShoppingCartContext.Provider value={{ getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, openCart, closeCart, cartItems, cartQuantity, }}>
+    const contextValue = useMemo(
+        () => ({
+          getItemQuantity,
+          increaseCartQuantity,
+          decreaseCartQuantity,
+          removeFromCart,
+          toggleCart,
+          cartItems,
+          cartQuantity,
+        }),
+        [getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, toggleCart, cartItems, cartQuantity]
+      );
+
+    return <ShoppingCartContext.Provider value={contextValue}>
         {children}
 
         <ShoppingCart isOpen={isOpen}></ShoppingCart>

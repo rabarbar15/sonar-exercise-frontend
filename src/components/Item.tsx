@@ -2,12 +2,12 @@ import { Button, Card } from 'react-bootstrap'
 import { formatCurrency } from '../utilities/formatCurrency'
 import { useShoppingCart } from '../context/ShoppingCartContext'
 
-type ItemProps = {
+type ItemProps =  Readonly<{
     id: number
     name: string
     author: string
     price: number
-}
+}>;
 
 export const Item = ({id, name, author, price}: ItemProps) => {
   const { increaseCartQuantity } = useShoppingCart()

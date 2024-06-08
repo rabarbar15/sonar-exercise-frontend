@@ -94,7 +94,7 @@ const Payment = () => {
           <div className='w-100'>
             <form onSubmit={handleSubmit} className=''>
               <div className="d-flex align-items-center justify-content-between">
-                <label className="p-2" htmlFor="">Name: </label>
+                <label className="p-2" htmlFor="name">Name: </label>
                 <input type="name" className="form-control" id="name" aria-describedby="emailHelp" placeholder="Jan Kowalski" value={name} onChange={(e) => setName(e.target.value)}  />
                 <button type="submit" className="btn btn-danger m-2 btn-lg btn-block">Order</button>
               </div>

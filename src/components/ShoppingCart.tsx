@@ -5,9 +5,9 @@ import { formatCurrency } from "../utilities/formatCurrency";
 // import storeItems from "../data/items.json"
 import { useFetchBooks } from "../data/FetchData";
 
-type ShoppingCartProps = {
+type ShoppingCartProps = Readonly<{
     isOpen: boolean
-}
+}>;
 
 export function ShoppingCart({ isOpen }: ShoppingCartProps) {
     const { closeCart, cartItems } = useShoppingCart()
