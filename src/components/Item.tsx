@@ -7,7 +7,6 @@ type ItemProps = {
     name: string
     author: string
     price: number
-    imgUrl: string
 }
 
 export const Item = ({id, name, author, price}: ItemProps) => {
@@ -16,10 +15,6 @@ export const Item = ({id, name, author, price}: ItemProps) => {
   return <Card 
     style={{ width: "270px" }}
   >
-    
-    {/* <Card.Img variant='top' src={imgUrl} height="410px" 
-      style={{ objectFit: "cover" }} 
-    /> */}
 
     <Card.Body>
 

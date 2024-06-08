@@ -3,12 +3,12 @@ import { useShoppingCart } from "../context/ShoppingCartContext"
 import { formatCurrency } from "../utilities/formatCurrency"
 import { useFetchBooks } from "../data/FetchData"
 
-type CartItem = {
+type CartItemProps = {
     id: number
     quantity: number
 }
 
-export function CartItem({ id, quantity }: CartItem) {
+export function CartItem({ id, quantity }: CartItemProps) {
     const { removeFromCart } = useShoppingCart()
     const { books } = useFetchBooks()
 

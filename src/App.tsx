@@ -9,8 +9,6 @@ import Payments from './pages/Payments'
 function App() {
 
   return (
-  <>
-  
     <ShoppingCartProvider>
       <Navbar />
       <Container className='mb-4'>
@@ -21,7 +19,6 @@ function App() {
         </Routes>
       </Container>
     </ShoppingCartProvider>
-  </>
   )
 }
 

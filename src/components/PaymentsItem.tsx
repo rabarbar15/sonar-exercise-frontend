@@ -4,12 +4,12 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { useFetchBooks } from "../data/FetchData";
 
-type PaymentItem = {
+type PaymentItemProps = {
     id: number
     quantity: number
 }
 
-export function PaymentItem({ id, quantity }: PaymentItem) {
+export function PaymentItem({ id, quantity }: PaymentItemProps) {
     const { removeFromCart } = useShoppingCart()
     const { books } = useFetchBooks()
     const item = books.find((item: any) => item.id === id)
