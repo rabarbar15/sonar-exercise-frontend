@@ -3,8 +3,8 @@ import { useShoppingCart } from '../context/ShoppingCartContext'
 import { PaymentItem } from '../components/PaymentsItem'
 import { formatCurrency } from '../utilities/formatCurrency'
 import { useFetchBooks, createOrder } from '../data/FetchData'
-import { useState } from 'react'
-import React from 'react'
+import { useState, React } from 'react'
+
 
 interface Book {
   id: number
@@ -13,7 +13,7 @@ interface Book {
 
 type Order = {
   id: number,
-  name: String,
+  name: string,
   books: Book[]
 }
 
@@ -103,10 +103,7 @@ const Payment = () => {
       
         </Stack>
       </Container>) : (
-        <>
           <h5 className='p-4'>You have no books selected yet :c</h5>
-
-        </>
       )}
     </>
   )

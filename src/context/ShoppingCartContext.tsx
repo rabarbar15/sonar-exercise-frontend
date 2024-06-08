@@ -1,9 +1,9 @@
 import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 import { ShoppingCart } from "../components/ShoppingCart";
 
-type ShoppingCartProviderProps = {
+type ShoppingCartProviderProps =  Readonly<{
     children: ReactNode
-}
+}>
 
 type CartItem = {
     id: number

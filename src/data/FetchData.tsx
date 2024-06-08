@@ -26,7 +26,7 @@ interface Book {
 
 type Order = {
     id: number,
-    name: String,
+    name: string,
     books: Book[]
 }
 
