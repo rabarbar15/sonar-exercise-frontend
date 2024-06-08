@@ -13,7 +13,6 @@ export const useFetchBooks = () => {
             .catch(error => {
                 console.error('Error fetching data', error)
             })
-          
 
     }, [])
 

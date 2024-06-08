@@ -10,6 +10,7 @@ function App() {
 
   return (
   <>
+  
     <ShoppingCartProvider>
       <Navbar />
       <Container className='mb-4'>
