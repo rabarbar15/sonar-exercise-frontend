@@ -4,10 +4,10 @@ import { useShoppingCart } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 import { useFetchBooks } from "../data/FetchData";
 
-type PaymentItemProps = {
+type PaymentItemProps =  Readonly<{
     id: number
     quantity: number
-}
+}>;
 
 export function PaymentItem({ id, quantity }: PaymentItemProps) {
     const { removeFromCart } = useShoppingCart()

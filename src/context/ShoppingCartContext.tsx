@@ -98,8 +98,10 @@ export function ShoppingCartProvider( { children }: ShoppingCartProviderProps ) 
           toggleCart,
           cartItems,
           cartQuantity,
+          openCart,
+          closeCart
         }),
-        [getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, toggleCart, cartItems, cartQuantity]
+        [getItemQuantity, increaseCartQuantity, decreaseCartQuantity, removeFromCart, toggleCart, cartItems, cartQuantity, openCart, closeCart]
       );
 
     return <ShoppingCartContext.Provider value={contextValue}>
